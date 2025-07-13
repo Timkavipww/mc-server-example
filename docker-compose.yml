@@ -1,6 +1,6 @@
 services:
   mc:
-    image: itzg/minecraft-server:java8
+    image: zg/minecraft-server:java8
     container_name: mc-server
     ports:
       - "25565:25565"
