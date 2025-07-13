@@ -1,0 +1,19 @@
+services:
+  mc:
+    image: itzg/minecraft-server:java8
+    container_name: mc-server
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      LEVEL: "world"
+      TYPE: "FORGE"
+      VERSION: "1.7.10"
+      FORGEVERSION: "10.13.4.1614"
+      MEMORY: "2G"
+      ENABLE_RCON: "true"
+      JVM_OPTS: -Dfml.queryResult=confirm
+
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
